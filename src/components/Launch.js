@@ -20,7 +20,6 @@ import {
   AspectRatioBox,
   StatGroup,
 } from "@chakra-ui/core";
-import { v4 as uuidv4 } from 'uuid'
 
 import { useSpaceX } from "../utils/use-space-x";
 import { formatDateTime } from "../utils/format-date";
@@ -213,13 +212,11 @@ function Video({ launch }) {
 }
 
 function Gallery({ images }) {
-  
   return (
     <SimpleGrid my="6" minChildWidth="350px" spacing="4">
       {images.map((image) => {
-        const key = uuidv4()
         return (
-            <a href={image} key={key}>
+            <a href={image} key={image}>
               <Image src={image.replace("_o.jpg", "_z.jpg")} />
             </a>
         )

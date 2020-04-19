@@ -2,7 +2,6 @@ import React from "react";
 import { Badge, Box, SimpleGrid, Text } from "@chakra-ui/core";
 import { Link } from "react-router-dom";
 import { useSWRPages } from "swr";
-import { v4 as uuidv4 } from 'uuid'
 import { useSpaceX } from "../utils/use-space-x";
 import Error from "./Error";
 import Breadcrumbs from "./Breadcrumbs";
@@ -28,9 +27,8 @@ export default function LaunchPads() {
       if (!launchPads) return null;
 
       return launchPads.map((launchPad) => {
-        const key = uuidv4()
         return (
-            <LaunchPadItem key={key} launchPad={launchPad} />
+            <LaunchPadItem key={launchPad.site_id} launchPad={launchPad} />
         )
       });
     },

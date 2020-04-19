@@ -7,7 +7,6 @@ import {
 } from "@chakra-ui/core";
 import { Link } from "react-router-dom";
 import { ChevronsRight } from "react-feather";
-import { v4 as uuidv4 } from 'uuid'
 
 export default function Breadcrumbs({ items }) {
   
@@ -19,11 +18,9 @@ export default function Breadcrumbs({ items }) {
     >
       {items.map((item, index) => {
         const isCurrentPage = items.length === index + 1;
-        const key = uuidv4()
-        
         return (
           <BreadcrumbItem
-              key={key}
+              key={item.to}
               isCurrentPage={isCurrentPage}
           >
             <BreadcrumbLink
