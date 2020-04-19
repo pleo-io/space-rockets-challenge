@@ -40,11 +40,25 @@
       <updated>1587311900843</updated>
       <workItem from="1587311904250" duration="1088000" />
       <workItem from="1587314109362" duration="2000" />
-      <workItem from="1587314121801" duration="175000" />
+      <workItem from="1587314121801" duration="904000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="500" height="445" key="SwitcherDM" timestamp="1587314631541">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1680.1027@0.23.1680.1027" timestamp="1587314631540" />
+    <state x="540" y="293" width="600" height="486" key="find.popup" timestamp="1587314979340">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="540" y="293" width="600" height="486" key="find.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587314979340" />
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup" timestamp="1587314402470">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="505" y="250" width="670" height="676" key="search.everywhere.popup/0.23.1680.1027@0.23.1680.1027" timestamp="1587314402470" />
   </component>
 </project>

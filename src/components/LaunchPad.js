@@ -115,7 +115,7 @@ function LocationAndVehicles({ launchPad }) {
     <SimpleGrid columns={[1, 1, 2]} borderWidth="1px" p="4" borderRadius="md">
       <Stat>
         <StatLabel display="flex">
-          <Box as={MapPin} width="1em" /> <Box ml="2">Location</Box>
+          <Box as={MapPin} width="1em" /> <Box ml="2" as="span">Location</Box>
         </StatLabel>
         <StatNumber fontSize="xl">{launchPad.location.name}</StatNumber>
         <StatHelpText>{launchPad.location.region}</StatHelpText>

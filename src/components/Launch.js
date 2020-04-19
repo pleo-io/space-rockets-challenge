@@ -20,6 +20,7 @@ import {
   AspectRatioBox,
   StatGroup,
 } from "@chakra-ui/core";
+import { v4 as uuidv4 } from 'uuid'
 
 import { useSpaceX } from "../utils/use-space-x";
 import { formatDateTime } from "../utils/format-date";
@@ -118,7 +119,7 @@ function TimeAndLocation({ launch }) {
     <SimpleGrid columns={[1, 1, 2]} borderWidth="1px" p="4" borderRadius="md">
       <Stat>
         <StatLabel display="flex">
-          <Box as={Watch} width="1em" /> <Box ml="2">Launch Date</Box>
+          <Box as={Watch} width="1em" /> <Box ml="2" as="span">Launch Date</Box>
         </StatLabel>
         <StatNumber fontSize={["md", "xl"]}>
           {formatDateTime(launch.launch_date_local)}
@@ -212,13 +213,17 @@ function Video({ launch }) {
 }
 
 function Gallery({ images }) {
+  
   return (
     <SimpleGrid my="6" minChildWidth="350px" spacing="4">
-      {images.map((image) => (
-        <a href={image}>
-          <Image src={image.replace("_o.jpg", "_z.jpg")} />
-        </a>
-      ))}
+      {images.map((image) => {
+        const key = uuidv4()
+        return (
+            <a href={image} key={key}>
+              <Image src={image.replace("_o.jpg", "_z.jpg")} />
+            </a>
+        )
+      })}
     </SimpleGrid>
   );
 }
